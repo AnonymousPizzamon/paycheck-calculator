@@ -9,7 +9,7 @@ int main (){
 // total_tax = Social Security_deduct + Medicare_deduct
 //net_pay = gross_pay - total_tax
 
-const double PAY_RATE = 13.50;  //insert pay rate//
+const double PAY_RATE = 13.50;  //insert pay rate//Can implement scanf if desired//
 const double S_S_TAX_RATE = 0.062;  
 const double MEDICARE_TAX_RATE = 0.0145;
 
