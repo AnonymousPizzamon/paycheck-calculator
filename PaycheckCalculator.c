@@ -9,11 +9,10 @@ int main (){
 // total_tax = Social Security_deduct + Medicare_deduct
 //net_pay = gross_pay - total_tax
 
-const double PAY_RATE = 13.50;  //insert pay rate//Can implement scanf if desired//
 const double S_S_TAX_RATE = 0.062;  
 const double MEDICARE_TAX_RATE = 0.0145;
 
-
+double payRate;
 double gross_pay;
 double net_pay;
 double total_tax;
@@ -23,7 +22,10 @@ double total_hours_wk2 = 0;
 double week1_hours[7];
 double week2_hours[7];
 
-printf("Enter hours worked each day for week 1-\n ");
+printf("Enter Payrate: $");
+scanf("%lf", &payRate);
+
+printf("\nEnter hours worked each day for week 1-\n ");
 for (int i = 0; i < 7; i++ ){
     printf("Day %d: ", i + 1);
     scanf("%lf", &week1_hours[i]);   //takes in and stores input for each day into an array[i]//
@@ -42,7 +44,7 @@ printf("\tWeek2 Hours: %.3f\n\n", total_hours_wk2 );
 double total_hours = total_hours_wk1 + total_hours_wk2;
 printf("Total Hours: %.3f\n", total_hours);
 
-gross_pay = PAY_RATE * total_hours;
+gross_pay = payRate * total_hours;
 printf("Gross Pay = %.2f\n", gross_pay);
 
 total_tax = ((gross_pay * S_S_TAX_RATE) + (gross_pay * MEDICARE_TAX_RATE));
@@ -51,3 +53,4 @@ printf("Net Pay = %.2f\n", net_pay);
 
 
 }
+
